@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header" style="text-align : center">
+                <a class="navbar-brand text-light" href="/">Loan Approval Application System</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container p-5 mb-5 mt-5">
+
+        <form action="/predict" method="post" class="d-flex flex-column form" style="gap: 20px;">
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Name of the Applicant</h5>
+                            <!-- Name of the applicant -->
+                            <input type="text" class="form-control" name="name" id="name_field" required="required"
+                                size="50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age</h5>
+                            <!-- Age -->
+                            <input type="text" class="form-control" name="age" id="age_field" required="required"
+                                size="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Email of the Applicant</h5>
+                            <!-- Name of the applicant -->
+                            <input type="email" class="form-control" name="name" id="name_field" required="required"
+                                size="50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Phone Number</h5>
+                            <!-- Age -->
+
+                            <input type="text" class="form-control" name="age" id="age_field" required="required"
+                                size="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Gender -->
+                            <h5 class="card-title">Gender</h5>
+                            <select name="gender" class="form-control" id="gender_field" required="required">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Marital Status</h5>
+                            <!-- Married -->
+                            <select name="married" class="form-control" id="married_field" required="required">
+                                <option value="Yes">Married</option>
+                                <option value="No">Not Married</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dependents</h5>
+                            <!-- Total Stops -->
+                            <select name="dependents" class="form-control" id="dependents_field" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education Status</h5>
+                            <!-- Airline -->
+                            <select name="education" class="form-control" id="education_field" required="required">
+                                <option value="Not Graduate">Not Graduated</option>
+                                <option value="Graduate">Graduated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Credit History</h5>
+
+
+                            <div class="d-flex pt-2" style="gap: 10px">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="chistory" id="chistory-1"
+                                        value="0" checked>
+                                    <label class="form-check-label" for="chistory-1">
+                                        Not Available
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="chistory" id="chistory-2"
+                                        value="1">
+                                    <label class="form-check-label" for="chistory-2">
+                                        Available
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Card History -->
+                            <!-- <label class="radio-inline">
+                                <input type="radio" class="form-control" name="chistory" value="0" style="margin:10px">Not Available
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" class="form-control" name="chistory" value="1" style="margin:10px">Available
+                              </label> -->
+                            <!--select name="chistory" id="chistory_field" required="required"-->
+                            <!--option value="0">Not Available</option-->
+                            <!--option value="1">Available</option-->
+                            <!--/select-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Self Employment</h5>
+
+                            <div class="d-flex  pt-2" style="gap: 10px">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SEmp" id="SEmp-1" value="No"
+                                        checked>
+                                    <label class="form-check-label" for="SEmp-1">
+                                        Not Employed
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SEmp" id="SEmp-2" value="Yes">
+                                    <label class="form-check-label" for="SEmp-2">
+                                        Employed
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <!-- Employment -->
+                            <!--select name="employment" id="employment_field" required="required"-->
+                            <!--option value="0">No</option-->
+                            <!--option value="1">Yes</option-->
+                            <!--/select-->
+                            <!-- <label class="radio-inline">
+                                <input type="radio" class="form-control" name="employement" value="0"
+                                    style="margin:10px">Not Employed
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="form-control" name="employement" value="1"
+                                    style="margin:10px">Employed
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Applicant Income (in SGD)</h5>
+                            <!-- Card History -->
+                            <input type="number" class="form-control" name="aincome" id="aincome_field"
+                                required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Coapplicant Income (in SGD)</h5>
+                            <!-- Coapplicant Income -->
+                            <input type="number" class="form-control" name="caincome" id="caincome_field"
+                                required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Loan Amount (in SGD)</h5>
+                            <!-- Loan Amount -->
+                            <input type="number" class="form-control" name="loan" id="loan_field" required="required"
+                                size="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Duration of the Loan</h5>
+                            <!-- Name of the applicant -->
+                            <input type="number" class="form-control" name="duration" id="duration_field"
+                                required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Property Region</h5>
+
+
+
+
+                            <div class="d-flex  pt-2" style="gap: 10px">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="propregion" id="propregion-1"
+                                        value="Urban" checked>
+                                    <label class="form-check-label" for="propregion-1">
+                                        Urban
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="propregion" id="propregion-2"
+                                        value="Rural">
+                                    <label class="form-check-label" for="propregion-2">
+                                        Rural
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="propregion" id="propregion-3"
+                                        value="Semiurban">
+                                    <label class="form-check-label" for="propregion-3">
+                                        Semi-urban
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- Property Region -->
+                            <!-- <label class="radio-inline form-control">
+                                <input type="radio" class="form-control" name="region" value="2"
+                                    style="margin:10px">Urban
+                            </label>
+                            <label class="radio-inline form-control">
+                                <input type="radio" class="form-control" name="region" value="0"
+                                    style="margin:10px">Rural
+                            </label>
+                            <label class="radio-inline form-control">
+                                <input type="radio" class="form-control" name="region" value="1"
+                                    style="margin:10px">Semi Urban
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center">
+                <!-- Submit -->
+                <input type="submit" style="border: none;" class="form-control text-light bg-primary" value="Submit"
+                    class="btn btn-secondary">
+
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.nt/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
