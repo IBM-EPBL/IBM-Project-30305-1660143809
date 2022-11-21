@@ -1,0 +1,101 @@
+nav.navbar {
+
+
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.1px);
+    -webkit-backdrop-filter: blur(17.1px);
+}
+
+
+
+
+body {
+
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+.container,
+.card {
+
+    color: #ffffff;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.1px);
+    -webkit-backdrop-filter: blur(17.1px);
+}
+
+input {
+    /* From https://css.glass */
+    background: black;
+}
+
+
+.pred-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.pred-text-h3 {
+
+    color: #ffffff;
+    padding: 10px 15px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.1px);
+    -webkit-backdrop-filter: blur(17.1px);
+}
+
+
+.info-container {
+    display: grid;
+    grid-template-columns: max-content min-content 1fr;
+    
+    column-gap: 30px;
+    padding: 0px 30px;
+
+}
+
+div.separator {
+    color: #ffffff;
+    width: 2px;
+    height: 100%;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.1px);
+    -webkit-backdrop-filter: blur(17.1px);
+}
+
+.res-info {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 10px;
+    font-size: larger;
+}
+
+.res-info>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+}
